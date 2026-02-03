@@ -1,6 +1,6 @@
 cask "cc-insights" do
-  version "0.0.1"
-  sha256 "56e93fd0c544be4e82c0e42c0089f30353e87d61ec2c0e4385cad133e7838d60"
+  version "0.0.3"
+  sha256 "2116d96e4edde353540c960362d7607b5f98b1df146d180d50a0e4f11e120d50"
 
   url "https://github.com/zafnz/cc-insights/releases/download/v#{version}/cc-insights-macos.zip"
   name "CC Insights"
@@ -12,6 +12,6 @@ cask "cc-insights" do
 
   zap trash: [
     "~/Library/Application Support/CC Insights",
-    "~/Library/Preferences/com.example.cc-insights.plist",
+    "~/Library/Preferences/com.nickclifford.ccinsights.plist",
   ]
 end
