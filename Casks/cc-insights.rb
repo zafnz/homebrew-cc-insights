@@ -9,7 +9,7 @@ cask "cc-insights" do
 
   app "CC Insights.app"
 
-  postflight do
+  preflight do
     File.write("#{staged_path}/cc-insights", <<~EOS)
       #!/bin/bash
       exec "#{appdir}/CC Insights.app/Contents/MacOS/CC Insights" "$@"
