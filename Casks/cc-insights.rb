@@ -8,7 +8,16 @@ cask "cc-insights" do
   homepage "https://github.com/zafnz/cc-insights"
 
   app "CC Insights.app"
-  binary "#{appdir}/CC Insights.app/Contents/MacOS/CC Insights", target: "cc-insights"
+
+  postflight do
+    File.write("#{staged_path}/cc-insights", <<~EOS)
+      #!/bin/bash
+      exec "#{appdir}/CC Insights.app/Contents/MacOS/CC Insights" "$@"
+    EOS
+    set_permissions "#{staged_path}/cc-insights", "0755"
+  end
+
+  binary "#{staged_path}/cc-insights"
 
   zap trash: [
     "~/Library/Application Support/CC Insights",
