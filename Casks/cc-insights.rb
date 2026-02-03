@@ -1,6 +1,6 @@
 cask "cc-insights" do
-  version "0.0.8"
-  sha256 "945e11046a5778e4f0e68b139a99a92c7482fe23bbf148c5e5d0e167385a2fab"
+  version "0.0.9"
+  sha256 "b3facb356e92e6be047de3e229448fab2c34c320ed65717da810655f962d3959"
 
   url "https://github.com/zafnz/cc-insights/releases/download/v#{version}/cc-insights-macos.zip"
   name "CC Insights"
